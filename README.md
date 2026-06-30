@@ -12,7 +12,7 @@ Kami memisahkan penyimpanan gambar dari kode sumber utama (HTML/CSS/JS) untuk me
 
 ### 🌐 Kunjungi Kami
 Untuk melihat bagaimana aset-aset ini digunakan dalam aksi nyata, silakan kunjungi website resmi kami:
-**[Sematkan Link Website Anda Di Sini]**
+**https://osissmpn7mengwi.rf.gd**
 
 ---
 *Dikelola dan dikembangkan secara independen oleh Tim Pengembang OSIS SPENSI.*
