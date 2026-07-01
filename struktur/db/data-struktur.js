@@ -1,0 +1,807 @@
+
+const DATA_PROKER = {
+    sekbid1: [
+        "Melaksanakan Peribadahan Sesuai Dengan Ketentuan Agama.",
+        "Memperingati Hari-Hari Besar Keagamaan.",
+        "Membina Toleransi Kehidupan Antar Umat Beragama.",
+        "Mengadakan Lomba Yang Bernuansa Keagamaan.",
+        "Mengembangkan Dan Memberdayakan Kegiatan Keagamaan Di Sekolah."
+    ],
+    sekbid2: [
+        "Tepat Waktu Masuk Kelas.",
+        "Mengucapkan Salam Jika Bertemu Dengan Guru.",
+        "Melaksanakan LISA (Lihat Sampah Ambil).",
+        "Melaksanakan Piket Kelas.",
+        "Kerja Bakti Di Lingkungan Sekolah,Dan Tempat Suci/Pura.",
+        "Mengembangkan Budaya 7S(Spontan,senyum,Salam,Salim,SapaSopan,Dan Santun).",
+        "Melakukan Sumbangan Untuk Orang Yang Membutuhkan.",
+        "Menerapkan Budaya Hormat Dan Saling Menghormati Antar Warga Sekolah.",
+        "Melaksanakan Razia Perkelas.",
+        "Melaksanakan Pengecekan Tas /Razia Perkelas.",
+        "Melaksakan Lomba Kebersihan Kelas.",
+        "Mengembangkan Sikap Kekeluargaan Antar Warga Sekolah.",
+        "Menanam Dan Merawat Pohon/Tanaman Di Lingkungan Sekolah.",
+        " Menyelanggarakan Ajang Duta Spensi."
+    ],
+    sekbid3: [
+        "Pelaksanaan upacara bendera/upacara peringatan.",
+        "Menyanyikan lagu nasional dan pengucapan Pancasila.",
+        "Menjaga dan menghormati simbol-simbol lambang negara.",
+        "Melaksanakan kegiatan kepramukaan.",
+        "Mengunjungi dan mempelajari tempat yang bernilai sejarah."
+    ],
+    sekbid4: [
+        "Mengadakan lomba mata pelajaran/program keahlian.",
+        "Mengikuti kegiatan workshop, semionar, disklusi, panel yang bernuansa IPTEK.",
+        "Mengadakan study banding & kunjungan study wisata ke tempat sumber belajar.",
+        "Mengadakan pameran karya inovatif dan hasil penelitian.",
+        "Mengoptimalkan pemanfaatan persputakaan sekolah.",
+        "Membentuk klub, sains, seni & olahraga."
+    ],
+    sekbid5: [
+        "Memantapkan Dan Mengembangkan peran siswa di dalam osis  sesuai dengan tugas nya masing masing.",
+        "Melaksanakan kewajiban dan hak diri dan orang lain dalam pergaulan masyarakat.",
+        "Melaksanakan Kegiatan Kelompok pelajar,diskusi ,debat dan pidato .",
+        "Melaksanakan Kegiatan Orientasi siswa baru yang bersifat akademik dan pengenalan lingkungan tanpa kekerasan.",
+        "Melaksanakan Perindangan Lingkungan."
+    ],
+    sekbid6: [
+        "Meningkatkan kreativitas dan keterampilan dalam menciptakan suatu barang menjadi lebih berguna.",
+        "Meningkatkan kreativitas dan keterampilan di bidang public speaking.",
+        "Melaksanakan praktek kerja nyata (pkn) (pengalaman kerja lapangan) (pkl) (praktek kerja produksi)."
+    ],
+    sekbid7: [
+        "Melaksanakan Perilaku Hidup Bersih dan Sehat.",
+        "Melaksanakan Usaha Kesehatan Sekolah.",
+        "elaksanakan Pencegahan Penyalahgunaan Narkoba dan Gerakkan Minum Tablet Tambah Darah.",
+        "Meningkatkan Reproduksi Remaja.",
+        "Melaksanakan Pengamanan Jajan Anak Sekolah.",
+        "Peer Listing Corner.",
+        "Piket Medis Sekolah.",
+        "Peringatan Hari AIDS SEDUNIA."
+    ],
+    sekbid8: [
+        "Mengembangkan wawasan dan keterampilan siswa di bidang sastra.",
+        "Menyelenggarakan lomba sastra dan budaya.",
+        "Meningkatkan apresiasi budaya.",
+        "Mengoptimalkan literasi dan numerasi siswa."
+    ],
+    sekbid9: [
+        "Memanfaatkan TIK untuk memfasilitasi kegiatan pembelajaran.",
+        "Menjadikan TIK menjadi wahana kreativitas dan inovasi.",
+        "Menjadikan TIK sebagai media pengenalan sekolah ke masyarakat."
+    ],
+    sekbid10: [
+        "Melaksanakan Lomba Pidato.",
+        "Melaksanakan Lomba Story Telling.",
+        "Melaksanakan Lomba News Casting.",
+        "Melaksanakan Lomba Cerdas Cermat.",
+        "Siswa yang Berbidang Bahasa Inggris.",
+        "Melaksanakan Lomba Menyanyikan Lagu Bahasa Inggris."
+    ]
+};
+
+const DATA_PENGURUS = {
+    // ------------------------- PENGURUS INTI -------------------------
+    inti: [
+        {
+            jabatan: "Pembina",
+            nama: "",
+            panggilan: "",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: ["lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Ketua OSIS",
+            nama: "Ni Nyoman Tria Aura Rembulan",
+            panggilan: "Aura",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: ["lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Wakil Ketua OSIS",
+            nama: "Ni Kadek Parisudha Anjani",
+            panggilan: "Parisudha",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: ["lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Sekretaris Umum",
+            nama: "I Gede Reyndra Wikhananta",
+            panggilan: "Reyndra",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: ["lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Sekretaris I",
+            nama: "Ni Luh Putu Meilani Candra Dewi",
+            panggilan: "Meilani",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: ["lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Bendahara Umum",
+            nama: "Ni Putu Dianita windari",
+            panggilan: "Dianita",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: ["lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Bendahara I",
+            nama: "MADE ANGGA DWI SAPUTRA ",
+            panggilan: "Angga",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: ["lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"],
+            link_ig: "#",
+        },
+    ],
+
+    // ------------------------- SEKBID I -------------------------
+    sekbid1: [
+        {
+            jabatan: "Pembina Bidang",
+            nama: "Ni Luh Putu Sumariantini, S.Pd.",
+            panggilan: "Buk Suma",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: ["lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Made Bagus Reyhan Dantha Ganaya",
+            panggilan: "Reyhan",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: ["lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni Luh Gede Suci Anggreni",
+            panggilan: "Suci",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: ["lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni Kadek Ayu Aira Sugiartini",
+            panggilan: "Aira",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+    ],
+
+    // ------------------------- SEKBID II -------------------------
+    sekbid2: [
+        {
+            jabatan: "Pembina Bidang",
+            nama: "Ni Putu Ani Purwaningsih,S.S.",
+            panggilan: "Buk Ani",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Gusti Ayu Anggie Septiasih",
+            panggilan: "Anggie",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni Putu Ayu Gitari Pradnya Dewi",
+            panggilan: "Gitari",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Gede Manacika Pradnyana",
+            panggilan: "Dedek",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+    ],
+
+    // ------------------------- SEKBID III -------------------------
+    sekbid3: [
+        {
+            jabatan: "Pembina Bidang",
+            nama: "Vincensius I Putu Tommy Prayoga Ratna,S.pd",
+            panggilan: "Pak Tommy",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Pembina Bidang",
+            nama: " I Putu Kertayoga,S.pd",
+            panggilan: "Pak Yoga",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Pembina Bidang",
+            nama: "Desak Putu Sanjiwani,S. Pd",
+            panggilan: "Buk Desak",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni Putu Kesya Paramita",
+            panggilan: "Kesya",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Kadek Agus Janur Adipranata",
+            panggilan: "Janur",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Kadek Agus Yoga Saputra",
+            panggilan: "Yoga",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+    ],
+
+    // ------------------------- SEKBID IV -------------------------
+    sekbid4: [
+        {
+            jabatan: "Pembina Bidang",
+            nama: "Dra. Ni Luh Ramini M.Pd",
+            panggilan: "Buk Ramini",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Ketut Satria Wibawa",
+            panggilan: "Satria",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Kadek Rafa Waradana",
+            panggilan: "Rafa",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Komang Tri Pranata Putra",
+            panggilan: "Mang Tri",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+    ],
+
+    // ------------------------- SEKBID V -------------------------
+    sekbid5: [
+        {
+            jabatan: "Pembina Bidang",
+            nama: "Si Ngurah Gede Okadana S.P.d",
+            panggilan: "Pak Ngurah",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Maria Feranida Daniella",
+            panggilan: "Maria",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni Made Laksmi Dwi Jayanti",
+            panggilan: "laksmi",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Wayan Krisna Satria Dinata",
+            panggilan: "Krisna",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+    ],
+
+    // ------------------------- SEKBID VI -------------------------
+    sekbid6: [
+        {
+            jabatan: "Pembina Bidang",
+            nama: "Ni putu ayu sintya dewi S.P.D",
+            panggilan: "Buk Sintya",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Kadek Guna Jayadiarya",
+            panggilan: "Guna",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni made liana septiani putri",
+            panggilan: "Liana",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni Putu Derisa Ulandari",
+            panggilan: "Derisa",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+    ],
+
+    // ------------------------- SEKBID VII -------------------------
+    sekbid7: [
+        {
+            jabatan: "Pembina Bidang",
+            nama: "Ni Putu Lilik Puspita S.pd ",
+            panggilan: "Buk Lilik",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Gusti Ayu Made Kayla Widiantari",
+            panggilan: "Kayla",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Made Diah Puspita Sari",
+            panggilan: "Diah",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Gagus Putu Krisna Sedana Putra",
+            panggilan: "Krisna",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+    ],
+
+    // ------------------------- SEKBID VIII -------------------------
+    sekbid8: [
+        {
+            jabatan: "Pembina Bidang",
+            nama: "Ida Ayu Ratih Yadnya Suari,S,pd",
+            panggilan: "Buk Dayu",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni Putu Pradnya Dewi",
+            panggilan: "Pradnya",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni Kadek Nadia Ariyati",
+            panggilan: "Nadia",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "I Putu Gede Rafael Airlangga",
+            panggilan: "Rafael",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+    ],
+
+    // ------------------------- SEKBID IX -------------------------
+    sekbid9: [
+        {
+            jabatan: "Pembina Bidang",
+            nama: "Ni Putu Iin Pramesti, S.Kom",
+            panggilan: "Buk Iin",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Dewa Ayu Mirah Daneswari",
+            panggilan: "Danes",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni Putu Qhisya Adelia Putri",
+            panggilan: "Qhisya",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni Putu Aprita Mahadewi",
+            panggilan: "Prita",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+    ],
+
+    // ------------------------- SEKBID X -------------------------
+    sekbid10: [
+        {
+            jabatan: "Pembina Bidang",
+            nama: "Pande Made Pradnyana Putra S.Pd. M.Pd",
+            panggilan: "Mr Pande",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni putu putri anindya maheswari ",
+            panggilan: "Putri",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Dewa ayu putu anandita pujastawan ",
+            panggilan: "Dita",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Anggota",
+            nama: "Ni kadek ayu prastya swandewi",
+            panggilan: "Prastya",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            ],
+            link_ig: "#",
+        },
+    ],
+
+    // ------------------------- MPK -------------------------
+    mpk: [
+        {
+            jabatan: "Pembina MPK",
+            nama: "",
+            panggilan: "",
+            foto: "left-man.webp",
+            motto: "",
+            prestasi: [],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Ketua Umum MPK",
+            nama: "",
+            panggilan: "",
+            foto: "right-man.webp",
+            motto: "",
+            prestasi: [],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Komisi 1 (Aspirasi)",
+            nama: "",
+            panggilan: "",
+            foto: "left-man.webp",
+            tugas: "Kotak saran, Menampung seluruh aspirasi siswa",
+            motto: "",
+            prestasi: [],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Komisi 2 (Pengawasan)",
+            nama: "",
+            panggilan: "",
+            foto: "right-man.webp",
+            tugas: "Pengawasan terhadap OSIS, menghadiri rapat OSIS, wewenang evaluasi pengurus OSIS",
+            motto: "",
+            prestasi: [],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Komisi 3 (Regulasi)",
+            nama: "",
+            panggilan: "",
+            foto: "left-man.webp",
+            tugas: "Pemilihan OSIS, wewenang pecat atau memasukkan pengurus OSIS",
+            motto: "",
+            prestasi: [],
+            link_ig: "#",
+        },
+        {
+            jabatan: "Komisi 4 (Humas)",
+            nama: "",
+            panggilan: "",
+            foto: "right-man.webp",
+            tugas: "Hubungan dengan pihak luar, mengelola sosial media MPK",
+            motto: "",
+            prestasi: [],
+            link_ig: "#",
+        }
+    ]
+};
