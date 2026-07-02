@@ -1,0 +1,701 @@
+
+/* --- Hero / Page Header (Sekbid Style) --- */
+.kegiatan-hero {
+    position: relative;
+    min-height: 72vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #040A12;
+}
+
+.kegiatan-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../../global/assets/assets global/Foto seluruh Osis.webp');
+    background-size: cover;
+    background-position: center top;
+    filter: grayscale(60%);
+    transform: scale(1.05);
+    transition: transform 8s ease;
+    z-index: 0;
+}
+
+.kegiatan-hero-bg.loaded {
+    transform: scale(1);
+}
+
+.kegiatan-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(4, 10, 18, 1) 0%,
+        rgba(10, 25, 47, 0.75) 50%,
+        rgba(10, 25, 47, 0.35) 100%
+    );
+    z-index: 1;
+}
+
+.kegiatan-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 5% 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.kegiatan-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    backdrop-filter: blur(8px);
+    padding: 6px 18px;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.kegiatan-badge .badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #D4AF37;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+}
+
+.kegiatan-badge span {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #D4AF37;
+}
+
+.kegiatan-title-main {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.1;
+    max-width: 700px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    margin-bottom: 4px;
+}
+
+.kegiatan-subtitle {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 560px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+}
+
+/* --- Tab Switcher --- */
+.kegiatan-tabs {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tab-pill {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.55);
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.tab-pill:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.tab-pill.active {
+    background: linear-gradient(135deg, #D4AF37, #c49b2c);
+    color: #0A192F;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+}
+
+/* --- Content Section --- */
+.kegiatan-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 5% 40px;
+}
+
+/* --- Zigzag Item (Sekbid Style) --- */
+.kegiatan-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.kegiatan-item {
+    display: flex;
+    align-items: stretch;
+    background: #ffffff;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 50px rgba(10, 25, 47, 0.08);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.kegiatan-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.kegiatan-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.kegiatan-media-col {
+    width: 40%;
+    position: relative;
+    background: linear-gradient(135deg, #0A192F 25%, #162a4d 50%, #0A192F 75%);
+    background-size: 200% 100%;
+    animation: mediaShimmer 1.5s infinite;
+    border-right: 4px solid #D4AF37;
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+}
+
+@keyframes mediaShimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.kegiatan-item.reverse .kegiatan-media-col {
+    border-right: none;
+    border-left: 4px solid #D4AF37;
+}
+
+.kegiatan-media-col iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+}
+
+.kegiatan-nickname {
+    position: absolute;
+    bottom: 30px;
+    background: #D4AF37;
+    color: #0A192F;
+    padding: 8px 24px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 10;
+}
+
+.kegiatan-item:not(.reverse) .kegiatan-nickname {
+    right: -15px;
+}
+
+.kegiatan-item.reverse .kegiatan-nickname {
+    left: -15px;
+}
+
+.kegiatan-info-col {
+    width: 60%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.kegiatan-role-label {
+    font-family: var(--font-heading);
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.kegiatan-name-large {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 800;
+    color: #0A192F;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+/* Caption Box */
+.kegiatan-caption-box {
+    background: #1e293b;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+.kegiatan-caption-header {
+    background: #334155;
+    color: #e2e8f0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 8px;
+}
+.kegiatan-caption-body {
+    padding: 20px;
+    color: #f8fafc;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.kegiatan-ig-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-top: 5px;
+    align-self: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.kegiatan-ig-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(220, 39, 67, 0.3);
+    color: #ffffff;
+}
+
+/* Skeleton Loader */
+.skeleton-loader {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, #0e1a2e 0%, #152238 50%, #0e1a2e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+.skeleton-loader::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; right: 0; bottom: 0;
+    width: 200%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+    animation: skeletonShimmer 1.8s infinite;
+}
+
+.skeleton-loader::after {
+    content: '';
+    width: 48px; height: 48px;
+    border: 3px solid rgba(212, 175, 55, 0.15);
+    border-top-color: #D4AF37;
+    border-radius: 50%;
+    animation: skeletonSpin 1s linear infinite;
+}
+
+.skeleton-loader.loaded {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes skeletonShimmer {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(50%); }
+}
+
+@keyframes skeletonSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* --- Empty State --- */
+.kegiatan-empty {
+    text-align: center;
+    padding: 80px 20px;
+    color: #94a3b8;
+}
+
+.kegiatan-empty svg {
+    width: 64px; height: 64px;
+    stroke: #cbd5e1;
+    fill: none;
+    stroke-width: 1.5;
+    margin-bottom: 20px;
+}
+
+.kegiatan-empty h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.kegiatan-empty p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* ============================================
+   CTA "IKUTI KAMI" SECTION
+   ============================================ */
+.cta-section {
+    position: relative;
+    padding: 120px 5%;
+    overflow: hidden;
+    background: #0A192F; /* Fallback */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+}
+
+/* Dynamic Background Grid (Videos) */
+.cta-bg-grid {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    z-index: 0;
+    pointer-events: none;
+    gap: 0;
+}
+
+.cta-bg-item {
+    position: relative;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background: #0A192F;
+}
+
+.cta-bg-item iframe {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 130%;
+    height: 170%; /* Extra height to push white space down */
+    transform: translate(-50%, -35%) scale(1.2); /* Translate down to hide bottom white space */
+    pointer-events: none;
+    border: none;
+    opacity: 0.7;
+}
+
+.cta-bg-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(10, 25, 47, 0.4);
+    backdrop-filter: blur(12px) brightness(0.85);
+    -webkit-backdrop-filter: blur(12px) brightness(0.85);
+    z-index: 1;
+}
+
+/* Floating particles */
+
+.cta-particles {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.cta-particle {
+    position: absolute;
+    width: 4px; height: 4px;
+    background: #D4AF37;
+    border-radius: 50%;
+    opacity: 0;
+    animation: particleFloat 6s ease-in-out infinite;
+}
+
+.cta-particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; animation-duration: 7s; }
+.cta-particle:nth-child(2) { left: 25%; top: 60%; animation-delay: 1s; animation-duration: 5s; }
+.cta-particle:nth-child(3) { left: 45%; top: 30%; animation-delay: 2s; animation-duration: 8s; }
+.cta-particle:nth-child(4) { left: 65%; top: 70%; animation-delay: 0.5s; animation-duration: 6s; }
+.cta-particle:nth-child(5) { left: 80%; top: 15%; animation-delay: 3s; animation-duration: 7s; }
+.cta-particle:nth-child(6) { left: 90%; top: 50%; animation-delay: 1.5s; animation-duration: 5.5s; }
+.cta-particle:nth-child(7) { left: 15%; top: 80%; animation-delay: 2.5s; animation-duration: 6.5s; }
+.cta-particle:nth-child(8) { left: 55%; top: 10%; animation-delay: 4s; animation-duration: 8s; }
+
+@keyframes particleFloat {
+    0%, 100% { opacity: 0; transform: translateY(0) scale(0.5); }
+    20% { opacity: 0.6; }
+    50% { opacity: 0.3; transform: translateY(-40px) scale(1); }
+    80% { opacity: 0.5; }
+}
+
+/* CTA Card */
+.cta-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    background: rgba(10, 25, 47, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* removed border glow to match Canva flat dark style */
+
+.cta-icon {
+    width: 64px; height: 64px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.cta-icon svg {
+    width: 30px; height: 30px;
+    stroke: #D4AF37;
+    fill: none;
+    stroke-width: 2;
+}
+
+.cta-card h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.cta-card .cta-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Social Links */
+.cta-socials {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.cta-social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-social-btn svg {
+    width: 20px; height: 20px;
+    flex-shrink: 0;
+}
+
+/* Instagram Button */
+.cta-social-btn.instagram {
+    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 20px rgba(225, 48, 108, 0.3);
+}
+
+.cta-social-btn.instagram:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 30px rgba(225, 48, 108, 0.45);
+}
+
+.cta-social-btn.instagram svg {
+    stroke: #ffffff;
+    fill: none;
+    stroke-width: 2;
+}
+
+/* TikTok Button */
+.cta-social-btn.tiktok {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-social-btn.tiktok:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 30px rgba(0, 242, 254, 0.2);
+    border-color: rgba(0, 242, 254, 0.4);
+}
+
+.cta-social-btn.tiktok svg {
+    stroke: #ffffff;
+    fill: none;
+    stroke-width: 2;
+}
+
+/* Shimmer effect on buttons */
+.cta-social-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+    );
+    transform: rotate(30deg) translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.cta-social-btn:hover::after {
+    transform: rotate(30deg) translateX(100%);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .kegiatan-hero {
+        min-height: 300px;
+        padding: 110px 5% 50px;
+    }
+
+    .tab-pill {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+
+    .kegiatan-content {
+        padding: 40px 5% 30px;
+    }
+
+    .kegiatan-item,
+    .kegiatan-item.reverse {
+        flex-direction: column;
+    }
+
+    .kegiatan-media-col {
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        min-height: auto;
+        border-right: none !important;
+        border-left: none !important;
+        border-bottom: 4px solid #D4AF37;
+    }
+
+    .kegiatan-info-col {
+        width: 100%;
+        padding: 35px 25px;
+        text-align: center;
+    }
+
+    .kegiatan-ig-btn {
+        align-self: center;
+    }
+
+    .kegiatan-item:not(.reverse) .kegiatan-nickname {
+        right: 20px;
+        bottom: -20px;
+    }
+
+    .kegiatan-item.reverse .kegiatan-nickname {
+        left: 20px;
+        bottom: -20px;
+    }
+
+    /* CTA */
+    .cta-section {
+        padding: 60px 5%;
+    }
+
+    .cta-card {
+        padding: 36px 24px;
+    }
+
+    .cta-socials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-social-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .kegiatan-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .kegiatan-hero .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .kegiatan-title {
+        font-size: 1.1rem;
+    }
+
+    .kegiatan-caption {
+        font-size: 0.88rem;
+    }
+}
